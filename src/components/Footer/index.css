@@ -1,0 +1,39 @@
+.todo-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background: #f5f5f5;
+}
+
+.todo-footer .footerOption{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.footerOption span{
+    transform: translateX(15px);
+}
+
+.todo-footer .footerOption input{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.todo-footer button{
+    width: 120px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: red;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+ 

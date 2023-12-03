@@ -1,0 +1,42 @@
+.todo-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    margin: 10px;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.todo-item .option{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+
+.todo-item .option input{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.todo-item .option input:checked{
+    background: #1890ff;
+}
+
+/* 删除 */
+.todo-item button{
+    width: 60px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: #ff4d4f;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
