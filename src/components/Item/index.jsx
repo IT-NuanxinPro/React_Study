@@ -21,7 +21,7 @@ export default class Item extends Component {
     const {name,done} = this.props
     const {mouse} = this.state
     return (
-      <div className="todo-item" style={{border:mouse?'1px solid red':'none'}}
+      <div className="todo-item" style={{backgroundColor:mouse?'#ddd':'white'}}
       onMouseEnter={()=>{this.setState({mouse:true})}} onMouseLeave={()=>{this.setState({mouse:false})}}>
         <div className="option">
           <input type="checkbox" checked={done} onChange={this.handleChange}/>

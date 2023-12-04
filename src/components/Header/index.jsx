@@ -14,6 +14,7 @@ export default class Header extends Component{
       name:target.value,
       done:false
     });
+    target.value = '';
   }
   render(){
     return(

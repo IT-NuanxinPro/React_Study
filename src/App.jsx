@@ -51,13 +51,36 @@ export default class App extends Component {
     })
     this.setState({todos: newTodos})
   }
+  
+  clearCompleted = () => {
+    const {todos} = this.state
+    const newTodos = todos.filter((todoObj) => {
+      return !todoObj.done
+    })
+    this.setState({todos: newTodos})
+  }
+  // 全选
+  checkAll = (done) => {
+    const {todos} = this.state
+    const newTodos = todos.map((todoObj) => {
+      return {...todoObj, done}
+    })
+    this.setState({todos: newTodos})
+  }
+  isCheckAll = () => {
+    const {todos} = this.state
+    const result = todos.every((todoObj) => {
+      return todoObj.done === true
+    })
+    return result
+  }
   render() {
     return (
       <div className='todo-container'>
         <div className='todo-wrap'>
           <Header addTodo={this.addTodo}/>
           <List todos={this.state.todos} updateTodoItem={this.updateTodoItem} deleteTodoItem={this.deleteTodoItem}/>
-          <Footer/>
+          <Footer todos={this.state.todos} clearCompleted={this.clearCompleted} checkAll={this.checkAll} isCheckAll={this.isCheckAll()}/>
         </div>
       </div>
     )
